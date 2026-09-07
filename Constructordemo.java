@@ -5,7 +5,7 @@ class Student {
 
     Student() {
         this.rollno = 0;
-        this.name = "unknown";
+        this.name = "Ansil";
         this.marks = 0.0;
     }
 
@@ -37,8 +37,8 @@ public class ConstructorDemo {
     public static void main(String[] args) {
 
         Student s1 = new Student();
-        Student s2 = new Student(101, "Hana");
-        Student s3 = new Student(102, "Hari", 95.5);
+        Student s2 = new Student(101, "Haji");
+        Student s3 = new Student(102, "Hamdan", 95.5);
 
         System.out.println("First Student:");
         s1.display();
