@@ -8,7 +8,7 @@ class NumberData {
     }
 }
 
-class FactorialDemo {
+class Factorial {
 
     static long factorial(int n) {
         if (n == 0 || n == 1) {
