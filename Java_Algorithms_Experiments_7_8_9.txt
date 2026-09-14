@@ -1,0 +1,73 @@
+JAVA PROGRAM ALGORITHMS
+Experiments 7, 8 and 9
+
+EXPERIMENT 7 — ABSTRACT CLASS AND RUNTIME POLYMORPHISM
+
+Algorithm:
+1. Start.
+2. Create an abstract class Shape with an abstract method area().
+3. Create Circle, Rectangle, and Triangle classes that extend Shape.
+4. Override the area() method in each class.
+5. Create a Scanner object to get input.
+6. Display a menu for Circle, Rectangle, Triangle, and Exit.
+7. Read the user's choice.
+8. If Circle is selected, read radius, create a Circle object, and call area().
+9. If Rectangle is selected, read length and width, create a Rectangle object, and call area().
+10. If Triangle is selected, read base and height, create a Triangle object, and call area().
+11. If Exit is selected, terminate the program.
+12. Otherwise, display "Invalid choice".
+13. Repeat until the user selects Exit.
+14. Stop.
+
+
+EXPERIMENT 8 — STATIC, FINAL AND INNER CLASSES
+
+Algorithm:
+1. Start.
+2. Create a Student class with static members collegeName and studentCount.
+3. Declare the final variable MAX_MARK.
+4. Declare student details such as roll number and name.
+5. Create an inner class ExamResult to store three subject marks.
+6. Read the college name.
+7. Read the number of students.
+8. Create an array of Student objects.
+9. For each student:
+   a. Read roll number and name.
+   b. Read marks of three subjects.
+   c. Create a Student object.
+   d. Increase studentCount.
+   e. Create an ExamResult inner-class object.
+   f. Calculate total and average.
+   g. Check whether all three marks are at least 40.
+   h. Display the student's result.
+10. Display the total number of students.
+11. Close the Scanner.
+12. Stop.
+
+
+EXPERIMENT 9 — USER-DEFINED PACKAGE AND ACCESS PROTECTION
+
+Product.java — Algorithm:
+1. Start.
+2. Create a package named shopping.
+3. Create the Product class.
+4. Declare public, protected, default, and private members.
+5. Create a constructor to initialize product details.
+6. Create displayProduct() to display product information.
+7. Create applyDiscount() to calculate the discounted price.
+8. Check whether the discount percentage is between 0 and 100.
+9. Display the updated price.
+10. End.
+
+ShoppingDemo.java — Algorithm:
+1. Start.
+2. Import shopping.Product.
+3. Create a Scanner object.
+4. Read product ID, name, category, and price.
+5. Create a Product object.
+6. Display the product name and product details.
+7. Read the discount percentage.
+8. Apply the discount.
+9. Display the updated product details.
+10. Close the Scanner.
+11. Stop.
