@@ -1,0 +1,988 @@
+JAVA OOP PRACTICAL — COMPREHENSIVE VIVA QUESTION BANK
+==============================================================
+
+Purpose:
+This file is a large viva-preparation bank based on the Java programs in the current
+realansil/java GitHub repository and the uploaded Experiments 7–11.
+
+Covered repository programs:
+- prim.java
+- palindrome.java
+- Factorial.java
+- Constructor.java
+- Calc.java
+- Calculator.java
+- ArrayOps.java
+- HospitalDemo.java
+- BankDemo.java
+- ShapeDemo.java
+- StudentRecord.java
+- ShoppingDemo.java
+- shopping/Product.java
+
+Uploaded experiments:
+- Experiment 7 — ShapeDemo / abstract class and runtime polymorphism
+- Experiment 8 — StudentRecord / static, final and inner class
+- Experiment 9 — Product + ShoppingDemo / package and access protection
+- Experiment 10 — VehicleRentalSystem / interfaces and runtime polymorphism
+- Experiment 11 — TrainTicketReservation / exception handling
+
+Important:
+These are expected/likely viva questions, not a guarantee of the exact questions a teacher
+will ask. Learn the concept and code structure, not just the sample values and names.
+
+Format:
+Q = likely viva question
+A = short practical answer
+
+======================================================================
+
+
+A. Very Basic Java Viva
+-----------------------
+1. Q: What is Java?
+   A: Java is an object-oriented, class-based programming language designed to be portable through the JVM.
+2. Q: What is the entry point of a Java program?
+   A: The main method: public static void main(String[] args).
+3. Q: Why is main() static?
+   A: The JVM can call it without first creating an object of the class.
+4. Q: What is a class?
+   A: A class is a blueprint containing data members and methods.
+5. Q: What is an object?
+   A: An object is an instance of a class.
+6. Q: What does new do?
+   A: It creates an object and allocates memory for it.
+7. Q: What is a method?
+   A: A method is a block of code that performs an operation.
+8. Q: What is a variable?
+   A: A named storage location for a value.
+9. Q: What is a data type?
+   A: It specifies the kind of value a variable can store.
+10. Q: Name Java primitive data types.
+   A: byte, short, int, long, float, double, char and boolean.
+11. Q: What is a reference type?
+   A: A type that refers to an object, such as a class, array or interface reference.
+12. Q: What is Scanner used for?
+   A: It is commonly used to read input from the keyboard.
+13. Q: Why is java.util.Scanner imported?
+   A: Scanner belongs to java.util.
+14. Q: What does System.in represent?
+   A: The standard input stream, normally the keyboard.
+15. Q: What does System.out represent?
+   A: The standard output stream.
+16. Q: What does sc.nextInt() do?
+   A: It reads an integer.
+17. Q: What does sc.nextDouble() do?
+   A: It reads a double.
+18. Q: What does sc.nextLine() do?
+   A: It reads the remaining line as a String.
+19. Q: What does sc.next().charAt(0) do in prim.java?
+   A: It reads a token and takes its first character.
+20. Q: Why should Scanner be closed?
+   A: To release the input resource when it is no longer needed.
+
+B. Primitive Types and Type Casting — prim.java
+-----------------------------------------------
+21. Q: What concept is demonstrated by prim.java?
+   A: Primitive data types and type casting.
+22. Q: What is widening conversion?
+   A: Converting a smaller compatible primitive type to a wider type, such as int to double.
+23. Q: Is widening conversion explicit here?
+   A: No. The assignment double num2 = num is implicit.
+24. Q: What is narrowing conversion?
+   A: Converting a wider primitive type to a narrower type, such as double to int.
+25. Q: Why is (int) used before db?
+   A: Because narrowing conversion requires an explicit cast.
+26. Q: What happens to the decimal part when double is cast to int?
+   A: The fractional part is discarded.
+27. Q: What is char?
+   A: A primitive type that stores a single UTF-16 character.
+28. Q: Why is num2 declared as double?
+   A: To demonstrate widening conversion from int to double.
+29. Q: Why is db2 declared as int?
+   A: To demonstrate narrowing conversion from double to int.
+30. Q: Is prim.java mainly an OOP program?
+   A: No. It mainly demonstrates Java fundamentals and type conversion.
+
+C. Palindrome Program
+---------------------
+31. Q: What is a palindrome number?
+   A: A number that remains the same when its digits are reversed.
+32. Q: What is the main idea of palindrome.java?
+   A: Reverse the entered number and compare the reverse with the original.
+33. Q: Why is original stored before the loop?
+   A: Because num is modified while extracting its digits.
+34. Q: What does num % 10 give?
+   A: The last digit of the number.
+35. Q: What does num / 10 do for an int?
+   A: It removes the last digit through integer division.
+36. Q: Why is reverse initially zero?
+   A: It is the starting value used to build the reversed number.
+37. Q: What does reverse = reverse * 10 + digit do?
+   A: It appends the extracted digit to the reversed number.
+38. Q: Why does the loop use while(num > 0)?
+   A: It continues until all digits have been processed.
+39. Q: How is palindrome status checked?
+   A: By comparing original == reverse.
+40. Q: Give an example of a palindrome.
+   A: 121 or 1221.
+
+D. Factorial.java — Classes and Recursion
+-----------------------------------------
+41. Q: What concept is demonstrated by Factorial.java?
+   A: Classes, objects, constructors, recursion and passing an object to a method.
+42. Q: What is NumberData?
+   A: A class containing the integer field number.
+43. Q: What does the NumberData constructor do?
+   A: It initializes number using the given argument.
+44. Q: Why is this.number = number used?
+   A: this.number refers to the instance field and number refers to the parameter.
+45. Q: What is recursion?
+   A: A method calling itself on a smaller subproblem.
+46. Q: What is the base condition in factorial()?
+   A: n == 0 or n == 1.
+47. Q: Why is a base condition required?
+   A: It stops recursive calls and prevents infinite recursion.
+48. Q: What does factorial(n - 1) mean?
+   A: It calculates the factorial of the previous smaller integer.
+49. Q: Why is return type long?
+   A: To hold larger factorial results than int can hold.
+50. Q: What does calculateFactorial(NumberData obj) receive?
+   A: A reference to a NumberData object.
+51. Q: How is the object passed?
+   A: calculateFactorial(data).
+52. Q: What does obj.number access?
+   A: The number field of the NumberData object.
+53. Q: Can the class and method both be named Factorial?
+   A: Yes, because the class is Factorial and the method is factorial with a lowercase f.
+54. Q: Is factorial() static in the program?
+   A: Yes.
+55. Q: Why can factorial() be called without a Factorial object?
+   A: Because it is static.
+
+E. Constructor.java — Constructor Overloading and Method Overloading
+--------------------------------------------------------------------
+56. Q: What concept does Constructor.java primarily demonstrate?
+   A: Constructors, constructor overloading, method overloading and this.
+57. Q: How many Student constructors are present?
+   A: Three.
+58. Q: What is the default/no-argument constructor here?
+   A: Student().
+59. Q: What does the two-argument constructor accept?
+   A: rollno and name.
+60. Q: What does the three-argument constructor accept?
+   A: rollno, name and marks.
+61. Q: What is constructor overloading?
+   A: Having multiple constructors with different parameter lists in the same class.
+62. Q: How does Java choose an overloaded constructor?
+   A: By matching the number and types of arguments.
+63. Q: Do constructors have a return type?
+   A: No.
+64. Q: Can a constructor have the same name as its class?
+   A: Yes; that is required.
+65. Q: What is this in this.rollno = rollno?
+   A: A reference to the current object.
+66. Q: What is method overloading?
+   A: Using the same method name with different parameter lists.
+67. Q: Which method is overloaded in Constructor.java?
+   A: display().
+68. Q: How is display() overloaded?
+   A: One version has no parameter and another accepts a String message.
+69. Q: Is overloading compile-time or runtime polymorphism?
+   A: Compile-time polymorphism.
+70. Q: What does s2.display("Student Information") call?
+   A: The overloaded display(String) method.
+71. Q: What does display(String) do after printing the message?
+   A: It calls display() to print the student details.
+72. Q: What is the public main class called?
+   A: Constructor.
+73. Q: Which file name should be used?
+   A: Constructor.java.
+
+F. Calc.java — Objects and Instance Methods
+-------------------------------------------
+74. Q: What is the main OOP concept in Calc.java?
+   A: Creating an object and calling instance methods through it.
+75. Q: What is the class called in Calc.java?
+   A: Calculator.
+76. Q: What instance methods are present?
+   A: add, sub, multiply and divide.
+77. Q: How is the object created?
+   A: Calculator c = new Calculator().
+78. Q: Why is c used before c.add(...)?
+   A: Because add is an instance method.
+79. Q: What does add return?
+   A: The sum of two values.
+80. Q: What does sub return?
+   A: The difference of two values.
+81. Q: What does multiply return?
+   A: The product.
+82. Q: What special case is checked in divide?
+   A: Division by zero.
+83. Q: What happens if b == 0?
+   A: The program prints a message and returns 0.
+
+G. Calculator.java — Static Methods
+-----------------------------------
+84. Q: What is the main concept in Calculator.java?
+   A: Static methods.
+85. Q: Are add, sub, multiply and divide static?
+   A: Yes.
+86. Q: Is a Calculator object required to call these methods?
+   A: No.
+87. Q: How are static methods called inside main?
+   A: Directly by method name, such as add(n1,n2).
+88. Q: Why are they called class-level methods?
+   A: Because they belong to the class rather than an individual object.
+89. Q: What is the difference from Calc.java?
+   A: Calc.java uses instance methods and an object; Calculator.java uses static methods.
+90. Q: What is the return type of add?
+   A: int.
+91. Q: What is the return type of divide?
+   A: float.
+92. Q: Does static automatically mean immutable?
+   A: No. static and final are different concepts.
+93. Q: Can a static method directly use an instance field without an object?
+   A: No.
+
+H. ArrayOps.java — Arrays, Strings and Vector
+---------------------------------------------
+94. Q: What package is used for input in ArrayOps.java?
+   A: java.util.Scanner.
+95. Q: What collection class is imported?
+   A: java.util.Vector.
+96. Q: What is Access.array?
+   A: A static integer array shared by the Access class.
+97. Q: What does index(int i) do?
+   A: It returns array[i].
+98. Q: What does update(int i, int value) do?
+   A: It replaces array[i] with the new value.
+99. Q: What does search(int value) return?
+   A: The index of the first matching value, or -1 if not found.
+100. Q: What algorithm is used in sorting()?
+   A: Bubble sort.
+101. Q: How does the bubble sort comparison work?
+   A: It compares adjacent elements and swaps them when they are in the wrong order.
+102. Q: Why are two loops used in sorting?
+   A: One controls passes and the other compares adjacent elements in each pass.
+103. Q: What does an invalid array index check prevent?
+   A: Access outside the valid array range.
+104. Q: What are the array menu operations?
+   A: Display, get value, update, search, sort and exit.
+105. Q: What does str.length() return?
+   A: The number of characters in the string.
+106. Q: What does str.charAt(index) return?
+   A: The character at the specified index.
+107. Q: What does toUpperCase() do?
+   A: Returns the string converted to uppercase.
+108. Q: What does toLowerCase() do?
+   A: Returns the string converted to lowercase.
+109. Q: What does substring(start, end) mean?
+   A: It extracts from start up to but not including end.
+110. Q: What does indexOf(search) return?
+   A: The starting index of the substring, or -1 if not found.
+111. Q: What does replace(oldWord,newWord) do?
+   A: Returns a string with matching occurrences replaced.
+112. Q: What does contains(word) return?
+   A: true if the word/sequence exists, otherwise false.
+113. Q: Why is sc.nextLine() used after nextInt() in parts of ArrayOps.java?
+   A: To consume the remaining newline before reading a full line.
+114. Q: What is a Vector?
+   A: A growable, synchronized collection class from java.util.
+115. Q: How is an element added to Vector?
+   A: Using add().
+116. Q: How is an element inserted at a position?
+   A: Using add(index, value).
+117. Q: How is an element retrieved?
+   A: Using get(index).
+118. Q: How is an element updated?
+   A: Using set(index, value).
+119. Q: How is an element deleted?
+   A: Using remove(index).
+120. Q: How is membership checked?
+   A: Using contains().
+121. Q: How is the Vector size obtained?
+   A: Using size().
+122. Q: Why are bounds checked before get/set/remove?
+   A: To avoid invalid index access.
+123. Q: Is ArrayOps.java primarily a single OOP concept?
+   A: No. It is mainly an operations/data-structure program using static methods, arrays, Strings and Vector.
+
+I. HospitalDemo.java — Inheritance
+----------------------------------
+124. Q: What is the parent class?
+   A: Person.
+125. Q: Which classes directly extend Person?
+   A: Doctor and Nurse.
+126. Q: Which class extends Doctor?
+   A: Surgeon.
+127. Q: What type of inheritance is Person -> Doctor -> Surgeon?
+   A: Multilevel inheritance.
+128. Q: What type of relationship do Doctor and Nurse show?
+   A: Hierarchical inheritance from the same parent.
+129. Q: What member is defined in Person?
+   A: name.
+130. Q: What method is defined in Person?
+   A: displayName().
+131. Q: Why can Surgeon use displayName()?
+   A: Because Surgeon inherits it through Doctor from Person.
+132. Q: What does super(name) do in Doctor?
+   A: It calls the Person constructor.
+133. Q: What does super(name) do in Surgeon?
+   A: It calls the Doctor constructor.
+134. Q: What is constructor chaining?
+   A: The sequence of constructor calls from child to parent through super.
+135. Q: Which constructor executes first when Surgeon is created?
+   A: Person's constructor, after the chain begins through Doctor.
+136. Q: What is Doctor's own method?
+   A: diagnose().
+137. Q: What is Nurse's own method?
+   A: carePatient().
+138. Q: What is Surgeon's own method?
+   A: performSurgery().
+139. Q: Can Nurse call diagnose() in this code?
+   A: No, Nurse extends Person directly and does not inherit Doctor's methods.
+140. Q: Can Surgeon call diagnose()?
+   A: Yes, because Surgeon extends Doctor.
+141. Q: Why is name accessible in Surgeon?
+   A: It is inherited from Person.
+142. Q: What is the public main class?
+   A: HospitalDemo.
+143. Q: Which file name is required?
+   A: HospitalDemo.java.
+
+J. BankDemo.java — Overriding and Runtime Polymorphism
+------------------------------------------------------
+144. Q: What is the parent class?
+   A: BankAccount.
+145. Q: Which classes extend BankAccount?
+   A: SavingsAccount and CurrentAccount.
+146. Q: What common field is in BankAccount?
+   A: balance.
+147. Q: What common method is in BankAccount?
+   A: calculateInterest().
+148. Q: What does SavingsAccount calculate?
+   A: 5% of balance.
+149. Q: What does CurrentAccount calculate?
+   A: 2% of balance.
+150. Q: What is method overriding?
+   A: A subclass provides a new implementation of an inherited method with the same signature.
+151. Q: Which annotation is used for overriding?
+   A: @Override.
+152. Q: What reference is declared in main?
+   A: BankAccount account.
+153. Q: Can that reference refer to SavingsAccount?
+   A: Yes.
+154. Q: Can it refer to CurrentAccount?
+   A: Yes.
+155. Q: Why is this runtime polymorphism?
+   A: The method implementation is selected according to the actual object at runtime.
+156. Q: What happens when account refers to SavingsAccount and calculateInterest() is called?
+   A: SavingsAccount's overridden method executes.
+157. Q: What happens when account refers to CurrentAccount?
+   A: CurrentAccount's overridden method executes.
+158. Q: What is upcasting in this program?
+   A: Assigning a child object such as SavingsAccount to a BankAccount reference.
+159. Q: Why does super(balance) appear in the child constructors?
+   A: To initialize the parent-class field through the parent constructor.
+160. Q: Is this method overloading?
+   A: No; it is overriding.
+161. Q: Is a child-specific method accessible through a parent reference if not declared in the parent?
+   A: Not directly through that reference.
+
+K. Experiment 7 — ShapeDemo.java / Abstract Classes
+---------------------------------------------------
+162. Q: What is the abstract class?
+   A: Shape.
+163. Q: What is the abstract method?
+   A: area().
+164. Q: Can an abstract class be instantiated directly?
+   A: No.
+165. Q: Which classes extend Shape?
+   A: Circle, Rectangle and Triangle.
+166. Q: What does Circle's area() calculate?
+   A: π × radius × radius.
+167. Q: What does Rectangle's area() calculate?
+   A: length × width.
+168. Q: What does Triangle's area() calculate?
+   A: 0.5 × base × height.
+169. Q: Why is area() abstract?
+   A: Each shape needs a different implementation.
+170. Q: Why is @Override used?
+   A: To indicate that the subclass method overrides the inherited abstract method.
+171. Q: What type is the reference variable shape?
+   A: Shape.
+172. Q: Can shape refer to a Circle object?
+   A: Yes.
+173. Q: Can shape refer to a Rectangle object?
+   A: Yes.
+174. Q: Can shape refer to a Triangle object?
+   A: Yes.
+175. Q: Why is this runtime polymorphism?
+   A: The Shape reference calls the overridden method of the actual object.
+176. Q: What happens when choice == 1?
+   A: A Circle is created and shape.area() is called.
+177. Q: What happens when choice == 2?
+   A: A Rectangle is created and shape.area() is called.
+178. Q: What happens when choice == 3?
+   A: A Triangle is created and shape.area() is called.
+179. Q: What happens when choice == 4?
+   A: The do-while loop ends.
+180. Q: Why is do-while used?
+   A: The menu should appear at least once before checking the exit condition.
+181. Q: What does default handle?
+   A: An invalid menu choice.
+182. Q: Why is sc.close() outside the loop?
+   A: The Scanner is only needed after the input interaction is complete.
+183. Q: Can Shape contain a normal implemented method too?
+   A: Yes; abstract classes may also contain concrete methods.
+184. Q: Can an abstract method have a body in this form?
+   A: No; this declaration has no method body.
+185. Q: If a new Square is added, what must it do?
+   A: Extend Shape and implement area().
+186. Q: What is the main concept to remember if names change?
+   A: Abstract parent/reference + overridden child methods + runtime dispatch.
+
+L. Experiment 8 — StudentRecord.java
+------------------------------------
+187. Q: What are the static members?
+   A: collegeName and studentCount.
+188. Q: Why is collegeName static?
+   A: It is common to all Student objects.
+189. Q: Why is studentCount static?
+   A: It tracks the total number of Student objects at class level.
+190. Q: What is the final variable?
+   A: MAX_MARK.
+191. Q: What does final mean for a variable?
+   A: It cannot be reassigned after initialization.
+192. Q: What are the instance variables?
+   A: rollNo and name.
+193. Q: When is studentCount incremented?
+   A: In the Student constructor.
+194. Q: What is the inner class?
+   A: ExamResult.
+195. Q: What data does ExamResult store?
+   A: mark1, mark2 and mark3.
+196. Q: What does displayResult() calculate?
+   A: Total, average and pass/fail.
+197. Q: How is average calculated?
+   A: total / 3.0.
+198. Q: Why is 3.0 used instead of 3?
+   A: To make the division floating-point.
+199. Q: What is the pass rule in this program?
+   A: All three marks must be at least 40.
+200. Q: Can a student pass if one subject is 35?
+   A: No.
+201. Q: How is the Student array declared?
+   A: Student[] students = new Student[n].
+202. Q: Does that line create Student objects?
+   A: No. It creates an array of Student references.
+203. Q: When are the actual Student objects created?
+   A: Inside the loop using new Student(...).
+204. Q: How is the inner ExamResult object created?
+   A: students[i].new ExamResult(...).
+205. Q: Why is an enclosing Student object needed?
+   A: ExamResult is a non-static inner class.
+206. Q: What does Student.collegeName access?
+   A: The static collegeName member.
+207. Q: What does Student.displayStudentCount() call?
+   A: The static method for displaying total students.
+208. Q: Can a final variable be changed later?
+   A: No.
+209. Q: Can static data be different for every Student object?
+   A: Not normally; static data is shared by the class.
+210. Q: If n changes from 3 to 5, what changes?
+   A: The array size and number of loop iterations; the basic algorithm stays the same.
+211. Q: What concept is most likely tested if only student names and marks are changed?
+   A: The same static/final/inner-class structure.
+
+M. Experiment 9 — Packages and Access Protection
+------------------------------------------------
+212. Q: What package is used?
+   A: shopping.
+213. Q: Which class is inside the package?
+   A: Product.
+214. Q: Which class is the main class?
+   A: ShoppingDemo.
+215. Q: How is Product imported?
+   A: import shopping.Product;
+216. Q: What does public mean for productName?
+   A: It can be accessed from outside the class, subject to normal Java rules.
+217. Q: What access level is productId?
+   A: protected.
+218. Q: What access level is category?
+   A: Default/package-private.
+219. Q: What access level is price?
+   A: private.
+220. Q: Which member is not directly accessible outside Product?
+   A: price, because it is private.
+221. Q: Why is price private?
+   A: To restrict direct access and demonstrate encapsulation.
+222. Q: How is price changed from outside?
+   A: Through the public applyDiscount method.
+223. Q: What does displayProduct() do?
+   A: Displays product ID, name, category and price.
+224. Q: What does applyDiscount() do?
+   A: Validates the percentage and updates price.
+225. Q: What discount values are accepted?
+   A: Greater than 0 and less than or equal to 100.
+226. Q: What happens for an invalid discount?
+   A: It prints an invalid-discount message and does not change the price.
+227. Q: Why are there two Java files?
+   A: Product belongs to the shopping package while ShoppingDemo imports and uses it.
+228. Q: Why should Product.java be inside a shopping directory?
+   A: The source path should match package shopping.
+229. Q: What is encapsulation here?
+   A: Product keeps price private and exposes controlled public methods.
+230. Q: What is package-level/default access?
+   A: Access without a modifier, normally within the same package.
+231. Q: What is protected access?
+   A: It permits package access and access through inheritance.
+232. Q: What does import do?
+   A: Makes a type available by its simple name in the importing source file.
+233. Q: Can product.productName be accessed in ShoppingDemo?
+   A: Yes; it is public.
+234. Q: Why can ShoppingDemo call product.applyDiscount()?
+   A: The method is public.
+235. Q: What file should be compiled first conceptually?
+   A: The package class must be compiled as part of the package structure; both can be compiled together.
+236. Q: What should you remember if Product is renamed to Book?
+   A: Change package/class references consistently but keep the package/import/access-control structure.
+
+N. Experiment 10 — Interfaces and Runtime Polymorphism
+------------------------------------------------------
+237. Q: What is the first interface?
+   A: Rental.
+238. Q: What methods are declared in Rental?
+   A: rentVehicle() and returnVehicle().
+239. Q: What is PremiumRental?
+   A: An interface that extends Rental.
+240. Q: What additional method does PremiumRental declare?
+   A: addPremiumService().
+241. Q: What does CarRental implement?
+   A: PremiumRental.
+242. Q: What does BikeRental implement?
+   A: PremiumRental.
+243. Q: Why must CarRental implement rentVehicle(), returnVehicle() and addPremiumService()?
+   A: Because they come from the inherited interface contracts.
+244. Q: What reference is declared in main?
+   A: PremiumRental rental.
+245. Q: Can rental refer to CarRental?
+   A: Yes.
+246. Q: Can rental refer to BikeRental?
+   A: Yes.
+247. Q: What concept is demonstrated by that reference?
+   A: Runtime polymorphism using an interface reference.
+248. Q: What does extends mean for PremiumRental?
+   A: It inherits the contract of Rental.
+249. Q: What does implements mean for CarRental?
+   A: The class provides implementations for the interface methods.
+250. Q: What happens for choice 1?
+   A: rental refers to a CarRental.
+251. Q: What happens for choice 2?
+   A: rental refers to a BikeRental.
+252. Q: What happens for an invalid choice?
+   A: The program prints an error, closes Scanner and returns.
+253. Q: What happens when premium service is yes for a car?
+   A: CarRental's addPremiumService() runs.
+254. Q: What happens when premium service is yes for a bike?
+   A: BikeRental's addPremiumService() runs.
+255. Q: What happens if the user does not return the vehicle?
+   A: The program states that the rental is still active.
+256. Q: Can an interface be instantiated directly?
+   A: No.
+257. Q: Can a class implement more than one interface?
+   A: Yes.
+258. Q: Can an interface extend another interface?
+   A: Yes.
+259. Q: What is interface inheritance?
+   A: An interface inheriting method contracts from another interface.
+260. Q: If Car is changed to Bus, what core syntax remains?
+   A: interface, extends, implements, interface reference and overridden implementations.
+261. Q: Why is this not an abstract-class example?
+   A: The common contract is expressed through interfaces rather than an abstract superclass.
+
+O. Experiment 11 — Exception Handling
+-------------------------------------
+262. Q: What is the custom exception class?
+   A: InvalidBookingException.
+263. Q: What does it extend?
+   A: Exception.
+264. Q: Why extend Exception?
+   A: To create a user-defined checked exception based on Java's exception hierarchy.
+265. Q: What is checkAge() for?
+   A: It validates the passenger age.
+266. Q: What happens if age is below 5 or above 120?
+   A: InvalidBookingException is thrown.
+267. Q: What does throws InvalidBookingException mean?
+   A: The method declares that it may throw that exception.
+268. Q: What does throw new InvalidBookingException(...) do?
+   A: It creates and immediately throws the custom exception.
+269. Q: What does bookTickets() validate?
+   A: Ticket count, available seats and source/destination.
+270. Q: What happens if tickets <= 0?
+   A: A custom exception is thrown.
+271. Q: What happens if tickets > availableSeats?
+   A: A custom exception is thrown.
+272. Q: What happens if source and destination are equal?
+   A: A custom exception is thrown.
+273. Q: What is the fare per ticket in the supplied program?
+   A: 500.
+274. Q: How is total fare calculated?
+   A: tickets × farePerTicket.
+275. Q: What is try used for?
+   A: To surround statements that may throw exceptions.
+276. Q: What does the first catch handle?
+   A: InvalidBookingException.
+277. Q: What does the second catch handle?
+   A: Other exceptions caught as Exception.
+278. Q: What does finally do here?
+   A: Prints transaction completion and closes Scanner.
+279. Q: Does finally execute when an exception is caught?
+   A: Yes, after the applicable catch, assuming normal control flow.
+280. Q: What happens if seat choice is 1?
+   A: seatType becomes Window Seat.
+281. Q: What happens if seat choice is 2?
+   A: seatType becomes Aisle Seat.
+282. Q: What happens for another seat choice?
+   A: InvalidBookingException is thrown.
+283. Q: Why is nextLine() used after nextInt() in this program?
+   A: To consume the remaining newline before reading a String line.
+284. Q: What does availableSeats = availableSeats - tickets do?
+   A: It updates the remaining seat count after booking.
+285. Q: What does catch (Exception e) provide?
+   A: A general handler for other input/runtime exceptions.
+286. Q: Is InvalidBookingException a class?
+   A: Yes.
+287. Q: Is it also an example of inheritance?
+   A: Yes, because it extends Exception.
+288. Q: What if the teacher changes Train to Flight?
+   A: The exception-handling structure remains; application names and messages can change.
+289. Q: What if the fare changes from 500 to 650?
+   A: Only the fare value/calculation output changes; exception structure remains.
+290. Q: Why is error handling important here?
+   A: It prevents invalid input from terminating the program without a controlled response.
+
+P. Common OOP Viva — Important Definitions
+------------------------------------------
+291. Q: What is OOP?
+   A: Object-Oriented Programming organizes software around classes and objects.
+292. Q: Name the four commonly taught pillars of OOP.
+   A: Encapsulation, abstraction, inheritance and polymorphism.
+293. Q: Which program best shows encapsulation?
+   A: The Product class with private price and public methods.
+294. Q: Which program best shows inheritance?
+   A: HospitalDemo.java.
+295. Q: Which program best shows runtime polymorphism through a class reference?
+   A: BankDemo.java and ShapeDemo.java.
+296. Q: Which program best shows abstraction?
+   A: ShapeDemo.java.
+297. Q: Which program best shows interface-based polymorphism?
+   A: Experiment 10.
+298. Q: Which program best shows a user-defined exception?
+   A: Experiment 11.
+299. Q: Which program best shows an inner class?
+   A: StudentRecord.java.
+300. Q: What is the difference between abstraction and encapsulation?
+   A: Abstraction hides unnecessary implementation details; encapsulation bundles data and controls access.
+301. Q: What is the difference between inheritance and polymorphism?
+   A: Inheritance establishes a parent-child relationship; polymorphism allows one reference/interface to work with different implementations.
+302. Q: What is compile-time polymorphism?
+   A: Overloading resolved by the compiler.
+303. Q: What is runtime polymorphism?
+   A: Overriding/dynamic dispatch where the implementation is selected at runtime.
+304. Q: What is method overriding?
+   A: A subclass redefines an inherited method with the same signature.
+305. Q: What is method overloading?
+   A: Same method name with different parameter lists.
+306. Q: Can constructors be overridden?
+   A: No.
+307. Q: Can constructors be overloaded?
+   A: Yes.
+308. Q: Can a final variable be reassigned?
+   A: No.
+309. Q: Can a final method be overridden?
+   A: No.
+310. Q: Can a final class be inherited?
+   A: No.
+311. Q: Can an abstract class have constructors?
+   A: Yes.
+312. Q: Can an abstract class have concrete methods?
+   A: Yes.
+313. Q: Can an interface have methods with implementations in modern Java?
+   A: Yes, interfaces can contain default and static methods; the supplied practical code uses abstract method declarations.
+314. Q: Can an interface be instantiated?
+   A: No.
+315. Q: Can a class extend two classes?
+   A: No.
+316. Q: Can a class implement multiple interfaces?
+   A: Yes.
+317. Q: Can an interface extend multiple interfaces?
+   A: Yes.
+318. Q: What is upcasting?
+   A: Treating a child object as a parent-type reference.
+319. Q: Why is @Override useful?
+   A: It lets the compiler check that a method really overrides an inherited method.
+320. Q: What is dynamic method dispatch?
+   A: Runtime selection of an overridden method based on the actual object.
+
+Q. Keywords and Syntax Viva
+---------------------------
+321. Q: What does extends mean?
+   A: It expresses inheritance between a class and its superclass or between interfaces.
+322. Q: What does implements mean?
+   A: It declares that a class provides an interface's contract.
+323. Q: What does abstract mean on a class?
+   A: The class is incomplete for direct instantiation and may declare abstract methods.
+324. Q: What does abstract mean on a method?
+   A: The method has no implementation in that declaration and must be implemented by an appropriate concrete subclass.
+325. Q: What does static mean?
+   A: The member belongs to the class rather than an individual object.
+326. Q: What does final mean for a variable?
+   A: The variable cannot be reassigned after initialization.
+327. Q: What does this mean?
+   A: The current object.
+328. Q: What does super mean?
+   A: The immediate parent-class object/context used to access parent constructors or members.
+329. Q: What does @Override mean?
+   A: The programmer intends to override a superclass/interface method.
+330. Q: What does package mean?
+   A: It declares the package to which a class belongs.
+331. Q: What does import mean?
+   A: It allows a class to refer to another accessible type without its fully qualified name.
+332. Q: What does private mean?
+   A: Accessible only within its declaring class.
+333. Q: What does protected mean?
+   A: Accessible within the package and in subclasses under Java's access rules.
+334. Q: What does public mean?
+   A: Accessible wherever the class/member is accessible.
+335. Q: What is default access?
+   A: No modifier; package-private access.
+336. Q: Why does Java use braces?
+   A: They delimit blocks such as classes, methods, loops and conditions.
+337. Q: Why is a semicolon used?
+   A: It terminates most Java statements.
+338. Q: What is a constructor call using new?
+   A: It creates and initializes an object.
+339. Q: What is method signature in practical terms?
+   A: Method name plus parameter types; it is important for overloading and overriding rules.
+340. Q: What is a return type?
+   A: The type of value a method returns; void means no value is returned.
+
+R. Scanner and Input Viva
+-------------------------
+341. Q: Why can nextInt() cause problems before nextLine()?
+   A: nextInt() leaves the line terminator in the input buffer.
+342. Q: How is that handled in the supplied programs?
+   A: Call sc.nextLine() once to consume the remaining newline.
+343. Q: When should nextLine() be used?
+   A: When you want to read an entire line, including spaces.
+344. Q: When should next() be used?
+   A: When you want the next token rather than the whole line.
+345. Q: Why is next().charAt(0) used for a character?
+   A: Scanner does not provide a simple nextChar method.
+346. Q: What happens if a non-integer is entered for nextInt()?
+   A: An input mismatch exception can occur.
+347. Q: Which program explicitly catches generic input errors?
+   A: Experiment 11.
+348. Q: Why is Scanner closed?
+   A: To release its input resource.
+349. Q: Can one Scanner read both numbers and Strings?
+   A: Yes, with the appropriate next methods.
+
+S. Practical Exam / File and Compilation Viva
+---------------------------------------------
+350. Q: If the class is public, how should the file be named?
+   A: Usually exactly the same as the public class name with .java.
+351. Q: What file should ShapeDemo use?
+   A: ShapeDemo.java.
+352. Q: What file should StudentRecord use?
+   A: StudentRecord.java.
+353. Q: What file should VehicleRentalSystem use?
+   A: VehicleRentalSystem.java.
+354. Q: What file should TrainTicketReservation use?
+   A: TrainTicketReservation.java.
+355. Q: Why does Experiment 9 use two source files?
+   A: Product is in package shopping and ShoppingDemo imports it.
+356. Q: How should the shopping package folder be named?
+   A: shopping.
+357. Q: What is a Java source file extension?
+   A: .java.
+358. Q: What does javac do?
+   A: It compiles Java source code into bytecode/class files.
+359. Q: What does java do after compilation?
+   A: It launches the Java program on the JVM.
+360. Q: Example command for ShapeDemo?
+   A: javac ShapeDemo.java followed by java ShapeDemo.
+361. Q: Why should public class names match file names?
+   A: Java's source-file rules require the public top-level class name to match the file name.
+362. Q: What happens if the file name and public class name do not match?
+   A: Compilation fails.
+363. Q: Can multiple non-public classes be in one file?
+   A: Yes.
+364. Q: Can there be multiple public top-level classes in one Java source file?
+   A: Not under normal Java source-file rules; use separate files.
+365. Q: What is a package path issue?
+   A: The directory structure should correspond to the declared package for normal compilation/use.
+366. Q: What should you do if the teacher changes the public class name?
+   A: Change the file name to match it.
+367. Q: What should you do if the teacher changes only input values?
+   A: Keep the class structure and algorithm; replace the values/prompts.
+368. Q: What should you do if the teacher changes application names but keeps the concept?
+   A: Map the new names onto the same OOP pattern.
+
+T. Teacher-Style Change-the-Question Viva
+-----------------------------------------
+369. Q: If Circle is changed to Square in ShapeDemo, what must change?
+   A: The subclass name, constructor/fields, area formula, menu text and object creation; Shape and runtime-polymorphism structure remain.
+370. Q: If Student is changed to Employee in the constructor question, what stays?
+   A: The class/object/constructor/overloading pattern.
+371. Q: If SavingsAccount becomes FixedDepositAccount, what stays in BankDemo?
+   A: Parent reference, subclass inheritance, overriding and runtime dispatch.
+372. Q: If CarRental becomes BusRental, what should be preserved?
+   A: PremiumRental implementation and the required method implementations.
+373. Q: If Train becomes Flight, what can remain unchanged?
+   A: Custom exception, validation, try-catch-finally and throw/throws structure.
+374. Q: If marks change, does StudentRecord's OOP structure change?
+   A: No.
+375. Q: If discount changes, does package/access protection change?
+   A: No.
+376. Q: If the number of students changes, what changes?
+   A: The array size and loop iterations.
+377. Q: If the menu options are renumbered, what changes?
+   A: The switch/choice mapping and displayed menu.
+378. Q: If a method name changes, what must be updated?
+   A: Its declaration and every matching call.
+379. Q: If a class name changes, what must be checked?
+   A: The constructor name, object creation, references, imports if applicable, and public file name.
+380. Q: If a parent class changes name, what must be changed in a child?
+   A: The extends clause and any super(...) constructor reference where applicable.
+381. Q: If an interface name changes, what must be changed?
+   A: The interface declaration, extends/implements references and variable declarations that use it.
+382. Q: If the pass mark changes from 40 to 50, what line is affected in StudentRecord?
+   A: The conditional comparison for mark1, mark2 and mark3.
+383. Q: If fare per ticket changes, what changes in Experiment 11?
+   A: The fare value; the exception handling remains.
+
+U. High-Priority Rapid-Fire Questions
+-------------------------------------
+384. Q: Class or object: which is the blueprint?
+   A: Class.
+385. Q: Object or class: which is the instance?
+   A: Object.
+386. Q: Keyword for inheritance?
+   A: extends.
+387. Q: Keyword for interface implementation?
+   A: implements.
+388. Q: Keyword for parent constructor call?
+   A: super.
+389. Q: Keyword for current object?
+   A: this.
+390. Q: Keyword for class-level member?
+   A: static.
+391. Q: Keyword for non-reassignable variable?
+   A: final.
+392. Q: Keyword for custom parent exception relationship?
+   A: extends Exception.
+393. Q: Annotation for overriding?
+   A: @Override.
+394. Q: Keyword for explicitly throwing an exception?
+   A: throw.
+395. Q: Keyword for declaring a possible exception?
+   A: throws.
+396. Q: Block that always handles cleanup in this practical?
+   A: finally.
+397. Q: Block that handles exceptions?
+   A: catch.
+398. Q: Block that encloses risky statements?
+   A: try.
+399. Q: Same method name, different parameters?
+   A: Overloading.
+400. Q: Same method signature, child implementation?
+   A: Overriding.
+401. Q: Runtime polymorphism needs what kind of relationship?
+   A: An inheritance/interface relationship plus a parent/interface reference to a child implementation.
+402. Q: Abstract class can be instantiated?
+   A: No.
+403. Q: Interface can be instantiated?
+   A: No.
+404. Q: Private variable used to demonstrate what?
+   A: Encapsulation/access control.
+405. Q: StudentRecord inner class?
+   A: ExamResult.
+406. Q: ShapeDemo abstract method?
+   A: area().
+407. Q: BankDemo overridden method?
+   A: calculateInterest().
+408. Q: VehicleRental interface reference?
+   A: PremiumRental rental.
+409. Q: Train custom exception?
+   A: InvalidBookingException.
+410. Q: Package in shopping example?
+   A: shopping.
+411. Q: Main shopping class?
+   A: ShoppingDemo.
+
+V. Recommended 20 Questions to Memorize First
+---------------------------------------------
+412. Q: What is a class?
+   A: A blueprint for objects.
+413. Q: What is an object?
+   A: An instance of a class.
+414. Q: What is a constructor?
+   A: A special member used to initialize objects.
+415. Q: What is constructor overloading?
+   A: Multiple constructors with different parameter lists.
+416. Q: What is method overloading?
+   A: Same method name with different parameter lists.
+417. Q: What is inheritance?
+   A: A child class acquiring accessible members/behavior from a parent class.
+418. Q: What is method overriding?
+   A: A child class providing its own implementation of an inherited method.
+419. Q: What is runtime polymorphism?
+   A: A parent/interface reference invoking the overridden implementation of the actual child object at runtime.
+420. Q: What is abstraction?
+   A: Showing essential behavior while hiding implementation details.
+421. Q: What is an abstract class?
+   A: A class that may contain abstract methods and cannot be instantiated directly.
+422. Q: What is an interface?
+   A: A contract of methods that implementing classes must satisfy.
+423. Q: What is encapsulation?
+   A: Bundling data and methods together with controlled access to data.
+424. Q: What is a package?
+   A: A namespace that groups related classes.
+425. Q: What is static?
+   A: A class-level member shared by the class.
+426. Q: What is final?
+   A: A variable that cannot be reassigned after initialization.
+427. Q: What is an inner class?
+   A: A class declared inside another class.
+428. Q: What is throw?
+   A: Explicitly raises an exception.
+429. Q: What is throws?
+   A: Declares that a method may throw specified exceptions.
+430. Q: What is finally?
+   A: A block used for cleanup/final actions after try/catch processing.
+431. Q: Which program demonstrates the widest set of OOP features in one place?
+   A: StudentRecord combines static, final, inner class, constructors, object arrays and conditions; ShapeDemo and Experiment 10 are strongest for polymorphism/abstraction/interface concepts.
+
+TOTAL QUESTIONS: 431
+
+FINAL REVISION STRATEGY
+=======================
+1. First memorize the definitions in Section U.
+2. Then understand each program's class/object structure.
+3. For inheritance questions, be able to draw the class hierarchy.
+4. For polymorphism, be able to explain the reference type and actual object.
+5. For abstract classes/interfaces, be able to explain why the subclass implementations differ.
+6. For packages, remember package declaration, folder structure and import.
+7. For exceptions, clearly distinguish try, catch, throw, throws and finally.
+8. For Scanner questions, remember nextInt/nextDouble/next/nextLine and the newline issue.
+9. For the practical exam, practice changing names, values, class names and application themes.
+10. If the teacher changes the story but keeps the concept, reproduce the same programming pattern.
+
+SOURCE BASIS
+============
+The GitHub repository was checked for the current source-file list and the code for the
+repository programs used in this question bank. The uploaded PDFs were used for the
+Experiment 7–11 programs and their exact concepts.
